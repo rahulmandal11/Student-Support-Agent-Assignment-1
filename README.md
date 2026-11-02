@@ -49,6 +49,24 @@ The offline evaluator uses scripted model responses and makes no external API ca
 python scripts/evaluate.py --live
 ```
 
+## Evaluation
+
+Latest offline run: **10/10 automated checks passed** for the Assignment 1 profile.
+The evaluator used scripted responses; it verifies expected tool orchestration and observable
+database effects, not Groq answer quality.
+
+| Metric | Assignment 1 |
+|---|---:|
+| Common scenarios passed | 10/10 |
+| Mean orchestration latency | 6.60 ms |
+| Model tokens | N/A (scripted provider) |
+| Live answer accuracy | Not measured |
+
+The ten scenarios cover greetings, personal fee and scholarship lookups, handbook retrieval,
+preference save/recall, temporary information, support requests, and missing information.
+Latency is a local offline orchestration measurement and is not representative of live model
+response time. Run `python scripts/evaluate.py` to reproduce the offline evaluation.
+
 ## Project layout
 
 ```text
